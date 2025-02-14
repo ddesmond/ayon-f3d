@@ -1,10 +1,7 @@
 import os
 import time
 
-import clique
-
 from ayon_core.lib import run_detached_process
-from ayon_core.lib.transcoding import IMAGE_EXTENSIONS, VIDEO_EXTENSIONS
 from ayon_core.pipeline import load
 
 from ayon_f3d.utils import F3dExecutableCache
@@ -14,12 +11,9 @@ class OpenInF3d(load.LoaderPlugin):
     """Open Geomtery with system default"""
 
     _executable_cache = F3dExecutableCache()
-    product_types = ["*"]
+    product_types = ["pointcache", "usd", "model", "assembly", "animation"]
     representations = ["*"]
-    extensions = {
-        ext.lstrip(".")
-        for ext in set(IMAGE_EXTENSIONS) | set(VIDEO_EXTENSIONS)
-    }
+    extensions = {"*"}
 
     label = "Open in F3d"
     order = -10
