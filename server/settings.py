@@ -24,6 +24,7 @@ DEFAULT_VALUES = {
         ],
         "linux": [
             "/usr/bin/f3d",
+            "/opt/F3D-3.0.0-Linux-x86_64-raytracing/bin/f3d",
         ],
         "darwin": [
             "/Applications/f3d.app/Contents/MacOS/f3d",
