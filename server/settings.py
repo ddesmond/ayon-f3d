@@ -24,7 +24,6 @@ DEFAULT_VALUES = {
         ],
         "linux": [
             "/usr/bin/f3d",
-            "/usr/local/f3d-v3.0.0-Linux/bin/f3d",
         ],
         "darwin": [
             "/Applications/f3d.app/Contents/MacOS/f3d",
