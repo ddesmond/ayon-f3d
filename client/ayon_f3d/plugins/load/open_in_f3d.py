@@ -41,29 +41,14 @@ class OpenInF3d(load.LoaderPlugin):
         path = self.filepath_from_context(context)
         directory = os.path.dirname(path)
 
-        pattern = clique.PATTERNS["frames"]
-        files = os.listdir(directory)
-        collections, remainder = clique.assemble(
-            files,
-            patterns=[pattern],
-            minimum_items=1
-        )
-
-        if not remainder:
-            sequence = collections[0]
-            first_image = list(sequence)[0]
-        else:
-            first_image = path
-        filepath = os.path.normpath(os.path.join(directory, first_image))
-
-        self.log.info("Opening : {}".format(filepath))
+        self.log.info("Opening : {}".format(path))
 
         executable = self.get_f3d_path()
         cmd = [
             # f3d path
             str(executable),
             # PATH TO COMPONENT
-            filepath
+            path
         ]
 
         try:

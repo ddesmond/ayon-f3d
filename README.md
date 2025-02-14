@@ -17,3 +17,13 @@ Thanks!
 
 
 
+## Create package
+To create addon package run `create_package.py` script in the root of repository.
+
+```shell
+python create_package.py
+```
+
+That will create `./package/mrv2-<version>.zip` file which can be uploaded to AYON server.
+
+
